@@ -1,0 +1,10 @@
+<!--pages/stars/stars.wxml-->
+<template name="starsTemplate">
+    <view>
+        <image></image>
+        <image></image>
+        <image></image>
+        <image></image>
+        <image></image>
+    </view>
+</template>

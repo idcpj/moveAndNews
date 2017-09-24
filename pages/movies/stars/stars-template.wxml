@@ -1,0 +1,15 @@
+<!--pages/stars/stars.wxml-->
+<template name="starsTemplate">
+    <view class="stars-container">
+        <view class='stars'>
+        <block wx:for="{{starts}}" wx:for-item="i" wx:key="item">
+             <image  wx:if="{{i==1}}" src='/images/icon/stars.png'></image> 
+             <image  wx:elif="{{i==2}}" src='/images/icon/stars_ban.png'></image>
+             <image  wx:else src='/images/icon/stars_no.png'></image> 
+
+            <!-- <image   src="{{i==1?'/images/icon/stars.png':'/images/icon/stars_no.png'}}"></image> -->
+        </block>
+        </view>
+        <text>{{average?average:'暂无'}}</text>
+    </view>
+</template>

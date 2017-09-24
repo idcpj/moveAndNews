@@ -1,0 +1,10 @@
+/* pages/movies/movie-grid/movie-grid-template.wxss */
+@import "../movie/movie-template.wxss";
+
+.moreList{
+    display: inline-flex;
+    margin: 24rpx;
+}
+.grid-container{
+    height: 1300rpx;
+}

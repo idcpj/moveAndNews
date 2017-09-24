@@ -1,0 +1,24 @@
+<import src="post-item/post-item-template.wxml" />
+<view >
+    <!-- banner图可通过冒泡函数 只需要写在 swiper中 -->
+    <swiper   catchtap="onSwiperTap"indicator-dots="true">
+        <swiper-item   >
+            <image src='/images/dog.jpg' data-postId="0"></image>
+        </swiper-item>
+        <swiper-item >
+            <image src='/images/dian.jpg'  data-postId="1"></image>
+        </swiper-item>
+        <swiper-item >
+            <image src='/images/haizi.jpg' data-postId="2"></image>
+        </swiper-item>
+    </swiper>
+
+
+    <block wx:for="{{postList}}" wx:key='key'>
+        <!-- 引入template-->
+        <view bindtap="toPostDetail" data-postId="{{item.postId}}">
+            <template is="postItem" data="{{...item}}" />
+        </view>
+    </block>
+
+</view>

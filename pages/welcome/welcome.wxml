@@ -1,0 +1,7 @@
+<view class='container'>
+    <image class='user-header' src='/images/header.jpg'></image>
+    <text class='user-name'>你好,尸兄</text>
+    <view class='moto-container' bindtap='onContainerTap' >
+        <text class='moto' >开启微信小程序</text>
+    </view>
+</view>

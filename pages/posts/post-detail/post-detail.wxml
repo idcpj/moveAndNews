@@ -1,0 +1,22 @@
+<!--pages/posts/post-detail/post-detail.wxml-->
+<view class="container">
+    <image class='header-image' src='{{isPlayMusic?music.coverImgUrl:headImgSrc}}'></image>
+    <image class='music' catchtap='onMusicActionTap' src="{{isPlayMusic?'/images/icon/music.png':'/images/icon/zanting.png'}}"></image>
+
+    <view class='author-data'>
+        <image class="avatar" src='{{avatar}}'></image>
+        <text class='author'>{{author}}</text>
+        <text class='const-text'>发表于</text>
+        <text class='date'>{{dateTime}}</text>
+    </view>
+    <text class='title'>{{title}}</text>
+    <view class='tool'>
+        <view class='circle-img'>
+            <image wx:if="{{collcted}}" catchtap='onCollectionTap' src='/images/icon/love1.jpg'></image>
+            <image wx:else  catchtap='onCollectionTap' src='/images/icon/love.jpg'></image>
+            <image catchtap='onshareTap' src='/images/icon/icon1.jpg'></image>
+        </view>
+        <view class='horizon'></view>
+    </view>
+    <text class='detail'>{{detail}}</text>
+</view>

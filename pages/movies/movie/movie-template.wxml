@@ -1,0 +1,9 @@
+<!--pages/movies/movies.wxml-->
+<import src="../stars/stars-template.wxml"/>
+<template name="movieTemplate">
+    <view  class='movie-container' catchtap='toMovieDetail' data-moiveId="{{moiveId}}">
+        <image  src="{{converageUrl}}"></image>
+        <text >{{title}}</text>
+        <template is="starsTemplate" data="{{starts:starts,average:average}}"/>
+    </view>
+</template>
